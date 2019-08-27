@@ -1,0 +1,111 @@
+[
+  {
+    "uri": "features/specifications/home_api.feature",
+    "id": "validar-api",
+    "keyword": "Funcionalidade",
+    "name": "Validar API",
+    "description": "    Sendo um usuario\n    Posso consultar um endereço na VIA CEP",
+    "line": 2,
+    "elements": [
+      {
+        "id": "validar-api;validar-retotno-cep",
+        "keyword": "Cenario",
+        "name": "Validar Retotno Cep",
+        "description": "",
+        "line": 7,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@ValidaDadsoCep",
+            "line": 6
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "capybara-3.28.0/lib/capybara/cucumber.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23133
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.28.0/lib/capybara/cucumber.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 18506
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "de informo um cep:",
+            "line": 8,
+            "rows": [
+              {
+                "cells": [
+                  "cep",
+                  "04824100"
+                ]
+              }
+            ],
+            "output": [
+              "Este e o cep pesquisado: 04824100"
+            ],
+            "match": {
+              "location": "features/steps_definitions/home_step.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 150618
+            }
+          },
+          {
+            "keyword": "Quando ",
+            "name": "faço uma chamada na AIP do via cep",
+            "line": 10,
+            "match": {
+              "location": "features/steps_definitions/home_step.rb:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 315180804
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "então recebo os dados pertencentes ao cep:",
+            "line": 11,
+            "doc_string": {
+              "value": "04824-100",
+              "content_type": "",
+              "line": 12
+            },
+            "match": {
+              "location": "features/steps_definitions/home_step.rb:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2538410
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "capybara-3.28.0/lib/capybara/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 28787
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

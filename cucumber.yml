@@ -1,0 +1,15 @@
+## YAML Templatesss
+---
+default: -p pretty -p scenario -p dev -p html -p json
+
+pretty: --format pretty
+progress:  --format progress
+
+scenario: -t @ValidaDadsoCep
+
+html:  --format html --out=results/report.html
+json:  --format json --out=results/report.json
+
+dev: AMBIENTE=dev
+hmg: AMBIENTE=hmg
+
